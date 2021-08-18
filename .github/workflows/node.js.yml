@@ -1,7 +1,5 @@
 name: build
-on:
- push:
-  paths: '\*\*.js'
+on: push
 jobs:
  build:
   runs-on: ${{ matrix.os }}

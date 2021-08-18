@@ -2,14 +2,10 @@ name: build
 on: push
 jobs:
  build:
-  runs-on: ${{ matrix.os }}
+  runs-on: ubuntu-18.04
   strategy:
    matrix:
-    os: [macos-latest, windows-latest, ubuntu-18.04]
-    node: [10, 12.x, 14]
-    exclude:
-     - os: macos-latest
-     - node: 10
+    node: [14]
   steps:
    - uses: actions/checkout@v2
    - name: Use Node.js ${{ matrix.node }}
